@@ -1,0 +1,9 @@
+﻿.common-form .form-text,
+.common-form .form-textarea {
+  background:url(../images/input-bg.png) 0 0 repeat-x;
+}
+
+.common-form .form-text,
+.NFI-wrapper .NFI-filename {
+  line-height:30px;
+}
