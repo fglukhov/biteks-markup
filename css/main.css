@@ -561,7 +561,7 @@ dl:after,
 
 .fancybox-gallery img:hover {
   opacity:.7;
-  filter:alpha(opacity=7);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70)
 }
 
 .page-text table {
@@ -604,7 +604,11 @@ dl:after,
 .objects-list-item {
   float:left;
   width:305px;
-  margin:0 30px 11px 0;
+  padding:0 30px 11px 0;
+}
+
+.objects-list-item .pic {
+  padding:0 0 20px 0;
 }
 
 .objects-list-item img {
@@ -621,7 +625,7 @@ dl:after,
   -webkit-box-shadow:0 1px 2px 0 #000;
   -moz-box-shadow:0 1px 2px 0 #000;
   box-shadow:0 1px 2px 0 #000;
-  margin:0px 18px 20px 0;
+  margin:0px 18px 0 0;
   float:none;
 }
 
@@ -637,13 +641,13 @@ dl:after,
   clear:left;
   display:table;
   *display:block;
-  margin:0 0 24px 0;
+  padding:0;
 }
 
 .objects-list-2 .pic {
   width:196px;
   display:table-cell;
-  padding:0 35px 0 0;
+  padding:0 35px 24px 0;
   *float:left;
 }
 
@@ -656,6 +660,7 @@ dl:after,
   display:table-cell;
   *display:block;
   vertical-align:middle;
+  padding-bottom:24px;
 }
 
 .docs-gallery {
@@ -818,7 +823,7 @@ dl:after,
 
 .projects-carousel li img:hover {
   opacity:.7;
-  filter:alpha(opacity=7);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70)
 }
 
 .projects-carousel .jcarousel-prev-vertical {
@@ -849,7 +854,7 @@ dl:after,
 .projects-carousel .jcarousel-next-disabled {
   cursor:default;
   opacity:.5;
-  filter:alpha(opacity=50);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50)
 }
 
 .projects-carousel .jcarousel-clip {
@@ -909,7 +914,7 @@ dl:after,
   height:386px;
 }
 
-.main-banner {
+.main-slider-wrapper {
   margin:-21px -31px 21px -31px;
   border-bottom:3px solid #fff;
 }
@@ -1118,13 +1123,14 @@ dl:after,
 
 .objects-list-3 .objects-list-item {
   width:209px;
-  margin:0 15px 21px 0;
+  padding:0 15px 21px 0;
+  margin:0;
 }
 
 .objects-list-3 .pic {
   width:209px;
   height:122px;
-  margin:0 0 12px 0;
+  padding:0 0 12px 0;
 }
 
 .objects-list-3 .pic img {
@@ -1134,7 +1140,7 @@ dl:after,
 
 .objects-list .pic img:hover {
   opacity:.7;
-  filter:alpha(opacity=7);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70)
 }
 
 .news-list .all-link {
@@ -1527,4 +1533,45 @@ dl:after,
   font-weight:bold;
   overflow:hidden;
   padding:0 0 5px 0;
+}
+
+.main-slider {  
+  width:1080px; 
+  height:222px;
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.main-slider .slide {
+  display:block;
+  width:1080px;
+  height:222px;
+  position:absolute;
+  display:none;
+  color:#c3dee9;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+.main-slider .lister {
+  position: absolute;
+  height: 19px;
+  left: 42px;
+  bottom: 13px;
+}
+
+.main-slider .lister .item {
+  background-image:url(../images/slider-bullits.png);
+  background-repeat:no-repeat;
+  background-position:0 0;
+  width:17px;
+  height:34px;
+  float:left;
+  margin:0 0 0 0;
+  cursor:pointer;
+}
+
+.main-slider .lister .act {
+  background-position:-17px 0;
 }
