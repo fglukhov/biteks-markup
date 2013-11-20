@@ -472,8 +472,16 @@ function carouselAdaptation() {
         }
       });
       
-      listerItems.bind("mouseover",function () {
-        $(this).click();
+      // listerItems.bind("mouseover",function () {
+        // $(this).click();
+      // });
+      
+      slides.bind("click",function () {
+        if (listerItems.filter(".act").next().length) {
+          listerItems.filter(".act").next().click();
+        } else {
+          listerItems.eq(0).click();
+        }
       });
       
       var play = 1;
