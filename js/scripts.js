@@ -40,7 +40,7 @@ $(document).ready(function () {
   // Separating news items by rows
   
   if ($(".objects-list").length) {
-    $(".objects-list").not(".objects-list-2").not(".objects-list-3").each(function() {
+    $(".objects-list").not(".objects-list-2").not(".objects-list-3").not(".objects-list-4").each(function() {
       var list = $(this);
       
       var items = list.children(".objects-list-item");
@@ -338,6 +338,8 @@ function validateForms() {
       
       
         paramSel.click(function() {
+          $(this).parents(".common-form").find(".form-item").css("z-index",1);
+          $(this).parents(".form-item").css("z-index",10);
           if (!select.is(":disabled")) {
             if (dropdown.css("display") != "block") {
               $(".dropdown").fadeOut(150);

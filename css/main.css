@@ -1232,7 +1232,7 @@ dl:after,
   margin:19px 0 0 0;
 }
 
-.common-form .hr {
+.hr {
   border-top:2px dotted #bfbfbf;
   height:1px;
   margin:29px 0 29px 0;
@@ -1574,4 +1574,266 @@ dl:after,
 
 .main-slider .lister .act {
   background-position:-17px 0;
+}
+
+.common-form .param-selector {
+  position:relative;
+  height:30px;
+  float:left;
+  color:#474747;
+}
+
+.common-form .param-sel {
+  width:358px;
+  border-top:1px solid #cbcbcb;
+  border-right:1px solid #e3e3e3;
+  border-bottom:1px solid #cfcfcf;
+  border-left:1px solid #e3e3e3;
+  -moz-box-shadow: inset 0px 2px 5px -1px #bbb;
+  -webkit-box-shadow: inset 0px 2px 5px -1px #bbb;
+  box-shadow: inset 0px 2px 5px -1px #bbb;
+  outline:none;
+  font-size:12px;
+  float:left;
+  position:relative;
+  background:#fff;
+  font-size:16px;
+  color:#474747;
+}
+
+.common-form .param-selector .initial .sel-value {
+  /* color:#818181 !important; */
+}
+
+.common-form .param-sel .sel-value {
+  padding:0 30px 0 10px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  cursor:pointer;
+  height:30px;
+  line-height:30px;
+  color:#474747;
+}
+
+.common-form .param-selector .dropdown {
+  display:none;
+  position:absolute;
+  top:31px;
+  left:0;
+  padding:0 0;
+  z-index:10;
+  min-width:258px;
+  border:1px solid #cbcbcb;
+  background:#fff;
+  font-size:16px;
+  color:#474747;
+}
+
+.common-form .param-selector .dropdown div {
+  display:block;
+  padding:8px 10px;
+  cursor:pointer;
+  border-top:1px solid #cfcfcf;
+  margin-top:-1px;
+  color:#474747;
+}
+
+.common-form .param-selector .dropdown div:hover {
+  background-color:#dcdcdc;
+}
+
+.common-form .param-selector div.selected {
+  display:none !important;
+}
+
+.common-form .param-selector .arr {
+  background:url(../images/select-arr.png) 0 0 no-repeat;
+  width:30px;
+  height:30px;
+  right:0px;
+  top:0px;
+  position:absolute;
+  cursor:pointer;
+}
+
+.common-form .select-wrapper {
+  position:relative;
+}
+
+.common-form .field-group .param-selector {
+  clear:left;
+}
+
+.calc-2-form label,
+.calc-2-form .field-group-label {
+  font-size:16px;
+  line-height:18px;
+  font-weight:bold;
+  float:left;
+  width:150px;
+  padding:0 30px 0 0;
+  text-align:right;
+  display:block;
+}
+
+.common-form .field-group label {
+  font-size:12px;
+  font-weight:normal;
+  text-align:left;
+  padding:0 0 6px 0;
+  width:auto;
+}
+
+.common-form .field-group .form-item {
+  float:left;
+  margin:0 35px 0 0;
+}
+
+#calc2_type-selector .param-sel {
+  width:126px;
+}
+
+#calc2_type-selector .dropdown {
+  min-width:126px;
+}
+
+.calc-2-form {
+  padding:25px 13px 34px 13px;
+}
+
+.calc-2-form .field-group .param-sel {
+  width:86px;
+}
+
+.calc-2-form .field-group .dropdown {
+  min-width:86px;
+}
+
+.calc-2-form .form-item {
+  margin:0 0 21px 0;
+  position:relative;
+}
+
+.calc-2-form .field-group-label {
+  padding-top:18px;
+}
+
+.calc-2 .calc-results {
+  font-size:16px;
+  line-height:normal;
+  font-weight:bold;
+}
+
+.calc-2 .calc-results .val {
+  color:#a33b31;
+  padding:0 24px 0 4px;
+}
+
+.calc-2 .calc-results .val .num {
+  font-size:22px;
+}
+
+.calc-2 .hr {
+  margin:43px 0 21px 0;
+}
+
+.calc-pics img {
+  display:inline;
+}
+
+.calc-2 {
+  margin-bottom:65px;
+}
+
+h2.norm {
+  color:#474747;
+}
+
+.email-link {
+  color:#474747;
+}
+
+.ico-text-2 {
+  padding: 0 0 0 76px;
+  margin: 28px 0;
+}
+
+.we-glad {
+  font-size:16px;
+  font-weight:bold;
+  color:#a33b31;
+  margin:43px 0 0 0;
+}
+
+.objects-list-4 {
+  margin:-14px -30px 0 -7px;
+}
+
+.objects-list-4 .objects-list-item {
+  background:#f1f1f1;
+  margin:0 22px 15px 0;
+  padding:22px 21px 2px 21px;
+  behavior:url(PIE.htc);
+  position:relative;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width:462px;
+  float:left;
+  clear:none;
+  height:131px;
+  overflow:hidden;
+}
+
+.objects-list-4 .pic {
+  float:left;
+  margin:0 27px 0 0;
+}
+
+.objects-list-4 .pic,
+.objects-list-4 .pic img {
+  width:170px;
+  height:106px;
+}
+
+.objects-list-4 .ttl a,
+.objects-list-4 .ttl a:visited {
+  color:#474747;
+  font-weight:bold;
+  font-size:20px;
+  line-height:24px;
+  text-decoration:none;
+  background:url(../images/underline-4.gif) 0 bottom repeat-x;
+}
+
+.objects-list-4 .ttl a:hover {
+  background:none;
+}
+
+.objects-list-4 .descr {
+  overflow:hidden;
+}
+
+.objects-list-4 .ttl {
+  display:table-cell;
+  height:100px;
+  vertical-align:middle;
+}
+
+#objects_map {
+  width:1028px;
+  height:620px;
+}
+
+.map {
+  padding-bottom:20px;
+}
+
+.map h2 {
+  font-size:25px;
+  line-height:27px;
+  font-weight:bold;
+  color:#a33b31;
+  margin:20px 0 22px 0;
 }
