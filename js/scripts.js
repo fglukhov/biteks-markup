@@ -17,16 +17,31 @@ $(document).ready(function () {
 
   // Tabbed content
   
+  
+  
   $(".tabbed-content .tab").click(function() {
     $(this).parents(".tabs").find(".tab").removeClass("act");
     $(this).addClass("act");
     $(this).parents(".tabbed-content").find(".tab-content").hide()
-    $(this).parents(".tabbed-content").find(".tab-content[rel='"+$(this).attr("rel")+"']").show();
+    $(this).parents(".tabbed-content").find(".tab-content[rel='"+$(this).attr("rel")+"']").fadeIn(250);
     $("body").css("width",$("body").width()-1).css("width",$("body").width()+1);
     $(".tabbed-content .tab-cont").css("position","static").css("position","relative");
+    window.location.hash = $(this).attr("rel");
     carouselAdaptation();
   });
 
+  if ($(".tabbed-content").length) {
+    $(".tabbed-content").each(function() {
+      $(this).find(".tab").first().click();
+    })
+  }
+  
+  var locationHash = window.location.hash.replace("#","");
+  
+  if ($(".tab[rel='" + locationHash + "']").length) {
+    $(".tab[rel='" + locationHash + "']").click();
+  }
+  
   $(".home-idea .steps-row").each(function() {
     $(this).css("height",$(this).height())
   });

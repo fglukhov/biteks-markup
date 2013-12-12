@@ -458,7 +458,9 @@ dl:after,
   padding:0 0 0 25px;
 }
 
-.page-menu a:hover {
+.page-menu a:hover,
+.page-menu .act a,
+.page-menu .act a:visited {
   color:#a33b31;
 }
 
@@ -473,7 +475,9 @@ dl:after,
   top:2px;
 }
 
-.page-menu a:hover .ico-arr {
+.page-menu a:hover .ico-arr,
+.page-menu .act a .ico-arr,
+.page-menu .act a:visited .ico-arr {
   background-image:url(../images/pm-arr-hover.png);
 }
 
@@ -481,7 +485,9 @@ dl:after,
   background:url(../images/underline-3.gif) 0 bottom repeat-x;
 }
 
-.page-menu a:hover span {
+.page-menu a:hover span,
+.page-menu .act a span,
+.page-menu .act a:visited span {
   background:none;
 }
 
@@ -1152,14 +1158,57 @@ dl:after,
 }
 
 .tabbed-content .tab-content {
-  padding:27px 0 0 0;
+  padding:15px 0 0 0;
+}
+
+.tabbed-content .tabs {
+  font-size:13px;
+  line-height:17px;
+  margin:16px -16px 0 0;
+}
+
+.tabbed-content .tab {
+  float:left;
+  height:74px;
+  margin:0 8px 0 0;
+  cursor:pointer;
+  position:relative;
+  font-weight:bold;
+}
+
+.tabbed-content .tab-cont {
+  background:#dbe1ed;
+  padding:15px 49px 12px 21px;
+  behavior:url(PIE.htc);
+  position:relative;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  height:39px;
+}
+
+.tabbed-content .act {
+  background:url(../images/calc-tab-pt.png) center bottom no-repeat;
+}
+
+.tabbed-content .tabs .act .tab-cont {
+  background:#ca4436;
+  color:#fff;
+}
+
+.tabbed-content .tabs span {
+  background:url(../images/underline-4.gif) 0 bottom repeat-x;
+}
+
+.tabbed-content .tabs .act span {
+  background:none;
 }
 
 .calculator-tabs {
-  font-size:15px;
-  line-height:17px;
-  font-weight:bold;
-  margin:0 -16px 0 0;
+  font-size:15px !important;
+  line-height:17px !important;
+  font-weight:bold !important;
+  margin:0 -16px 0 0 !important;
 }
 
 .calculator-tabs .tab {
@@ -1183,7 +1232,7 @@ dl:after,
   width:202px;
 }
 
-.calculator-tabs .act {
+.calculator-tabs .tabs .act {
   background:url(../images/calc-tab-pt.png) center bottom no-repeat;
 }
 
@@ -1192,11 +1241,11 @@ dl:after,
   color:#fff;
 }
 
-.calculator-tabs span {
+.calculator-tabs .tabs span {
   background:url(../images/underline-4.gif) 0 bottom repeat-x;
 }
 
-.calculator-tabs .act span {
+.calculator-tabs .tabs .act span {
   background:none;
 }
 
@@ -1836,4 +1885,62 @@ h2.norm {
   font-weight:bold;
   color:#a33b31;
   margin:20px 0 22px 0;
+}
+
+.item-description {
+  margin:45px 0 20px 0;
+}
+
+.item-description .pic {
+  float:left;
+  width:290px;
+  overflow:hidden;
+}
+
+.item-description .descr {
+  overflow:hidden;
+  border-left:1px solid #dcdcdc;
+  padding:11px 0 11px 44px;
+  color:#a33b31;
+  font-size:13px;
+  line-height:16px;
+}
+
+.item-description h2 {
+  font-size:24px;
+  line-height:26px;
+  margin:0 0 6px 0;
+}
+
+.item-description .descr p {
+  margin:0 0 10px 0;
+}
+
+h2.alt {
+  color:#474747;
+}
+
+.col-half h2.alt {
+  margin-top:7px;
+}
+
+.ico-text-2 {
+  font-size:16px;
+  line-height:18px;
+  font-weight:bold;
+  padding-left:48px;
+}
+
+.ico-text-2 .ico {
+  top:-11px;
+}
+
+.col-half-narrow {
+  width:302px;
+}
+
+h4 {
+  font-weight:bold;
+  color:#a33b31;
+  margin:25px 0 10px 0;
 }
