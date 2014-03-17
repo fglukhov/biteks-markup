@@ -57,7 +57,7 @@ $(document).ready(function () {
   // Separating news items by rows
   
   if ($(".objects-list").length) {
-    $(".objects-list").not(".no-rows").not(".objects-list-2").not(".objects-list-3").not(".objects-list-4").each(function() {
+    $(".objects-list").not(".objects-list-2").not(".objects-list-3").not(".objects-list-4").each(function() {
       var list = $(this);
       
       var items = list.children(".objects-list-item");
@@ -136,11 +136,14 @@ $(document).ready(function () {
   
   // Fancyboxes
   
+  
   if ($(".fancybox").length) {
     
       
     $(".fancybox").each(function() {
-      $(this).fancybox();
+      $(this).fancybox({
+        showTitle : true
+      });
     })
     
 
@@ -246,16 +249,17 @@ function validateForms() {
   	  focusInvalid: false,
   	  sendForm : false,
       rules: {
-        calc_email: {
+        form_text_4: {
           required: true,
           email: true
         }
       },
   	  messages: {
-  	    calc_fio: "Поле не заполнено!",
-  	    calc_company: "Поле не заполнено!",
-  	    calc_phone: "Поле не заполнено!",
-        calc_email: "Введите правильный адрес!"
+  	    form_text_1: "Поле не заполнено!",
+  	    form_text_2: "Поле не заполнено!",
+  	    form_text_3: "Поле не заполнено!",
+        form_text_4: "Введите правильный адрес!",
+        form_textarea_5: "Поле не заполнено!",
   	  },
   	  errorPlacement: function(error, element) {
   	    // element.parents(".input-wrapper").addClass("input-wrapper-error");
@@ -286,10 +290,10 @@ function validateForms() {
         }
       },
   	  messages: {
-  	    calc_client: "Поле не заполнено!",
-  	    calc_manager: "Поле не заполнено!",
-  	    calc_phone2: "Поле не заполнено!",
-        calc_email2: "Введите правильный адрес!"
+  	    form_text_6: "Поле не заполнено!",
+  	    form_text_7: "Поле не заполнено!",
+  	    form_text_8: "Поле не заполнено!",
+        //form_text_4: "Введите правильный адрес!"
   	  },
   	  errorPlacement: function(error, element) {
   	    // element.parents(".input-wrapper").addClass("input-wrapper-error");
@@ -347,7 +351,7 @@ function validateForms() {
             flag = "";
           }
           
-          if (select.find("option").length > 2) {
+          if (select.find("option").length <= 2) {
           
             if ($(this).val() != select.val() /* || select.attr("ttl")*/) {
               dropdown.append("<div val='" + $(this).attr("value") + "'>" + flag + $(this).html() + "</div>");
@@ -404,7 +408,7 @@ function validateForms() {
           }
         });
         
-        dropdown.find("div").on("click",function () {
+        dropdown.on("click", "div", function() {
           selector.removeClass("param-sel-error");
           paramSel.removeClass("initial");
           var div = $(this);
@@ -418,7 +422,10 @@ function validateForms() {
             dropdown.find("div[val='']").remove();
           }
           dropdown.fadeOut(150, function () {
-            dropdown.find("div").show().removeClass("selected");
+            dropdown.find("div").show().removeClass("selected").removeClass("hidden");
+            if (select.find("option").length <= 2) {
+              div.addClass("hidden")
+            }
             div.addClass("selected");
             div.parents(".param-open").removeClass("param-open");
           });
@@ -497,6 +504,7 @@ function carouselAdaptation() {
           slides.eq($(this).index()).fadeIn(250).addClass("slide-act");
           //sliderMakeup();
         }
+		return false;
       });
       
       // listerItems.bind("mouseover",function () {
