@@ -45,19 +45,36 @@ $(document).ready(function () {
   }
   
   $(".home-idea .steps-row").each(function() {
-    $(this).css("height",$(this).height())
+    //$(this).css("height",$(this).height())
+  });
+  
+  $(".expandable").each(function() {
+    if ($(this).prev("p").length) {
+      $(this).prev("p").addClass("pre-expandable").append("&nbsp;&nbsp;<span class='p-trigger'>>></span>")
+    }
+		
+		if ($(this).prev("h2").length) {
+      $(this).prev("h2").addClass("pre-expandable").append("&nbsp;&nbsp;<span class='p-trigger' style='color:#a33b31 !important;'>>></span>")
+    }
+  });
+  
+  $(".p-trigger").on("click",function() {
+    $(this).parent().next(".expandable").find(".trigger").click();
+    $(this).hide();
   });
 
   $(".expandable .trigger").click(function() {
-    $(this).parents(".expandable").find(".cont").slideToggle(250);
+    $(this).parents(".expandable").children(".cont").slideToggle(250);
     var text = $(this).find("span").html();
     $(this).html(text == "подробнее" ? "<span>свернуть</span> &uarr;" : "<span>подробнее</span> >>");
+    $(this).toggleClass("trigger-vis");
+    $(this).parents(".expandable").prev().find(".p-trigger").show();
   });
 
   // Separating news items by rows
   
   if ($(".objects-list").length) {
-    $(".objects-list").not(".objects-list-2").not(".objects-list-3").not(".objects-list-4").each(function() {
+    $(".objects-list").not(".objects-list-2").not(".objects-list-3").not(".objects-list-4").not(".no-rows-2").each(function() {
       var list = $(this);
       
       var items = list.children(".objects-list-item");

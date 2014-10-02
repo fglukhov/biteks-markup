@@ -49,7 +49,7 @@ h1 {
   line-height:27px;
   font-weight:bold;
   color:#a33b31;
-  margin:0 0 .75em 0;
+  margin:0 0 1em 0;
 }
 
 h2 {
@@ -373,6 +373,7 @@ dl:after,
   line-height:16px;
   display:block;
   cursor:pointer;
+	text-decoration:none;
 }
 
 .services-menu-item .pic {
@@ -408,9 +409,9 @@ dl:after,
 }
 
 .services-menu-item .descr {
+	text-decoration:none;
   padding:11px 0 0 0;
   color:#4e6b96;
-  text-decoration:underline;
 }
 
 .services-menu-item:hover .descr {
@@ -419,6 +420,10 @@ dl:after,
 
 .services-menu-item span {
   display:block;
+}
+
+.services-menu-item:hover span {
+  text-decoration:underline !important;
 }
 
 .breadcrumbs {
@@ -591,6 +596,10 @@ dl:after,
   -moz-box-shadow:0 1px 2px 0 #000;
   box-shadow:0 1px 2px 0 #000;
   margin:3px 18px 13px 0;
+}
+
+.fancybox-gallery-alt img {
+  width:311px;
 }
 
 .fancybox-gallery img:hover {
@@ -961,7 +970,7 @@ dl:after,
   border-bottom:3px solid #fff;
 }
 
-.expandable .cont {
+.expandable > .cont {
   display:none;
 }
 
@@ -972,6 +981,15 @@ dl:after,
   font-size:12px;
   margin:-1.1em 0 0 0;
   padding-bottom:1.3em;
+  display:none;
+}
+
+.expandable-alt .trigger {
+  display:block !important;
+}
+
+.expandable .trigger-vis {
+  display:block;
 }
 
 .expandable .trigger span {
@@ -2171,4 +2189,182 @@ h4 {
   float:left;
   margin:0 40px 0 0;
   font-size:18px;
+}
+
+.pre-expandable {
+  position:relative;
+}
+
+.pre-expandable .p-trigger {
+  color:#4e6b96;
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+/* New styles */
+
+.sidebar-l {
+  width:275px;
+	margin:0 40px 0 0;
+	float:left;
+}
+
+.r-col-wide {
+  float:left;
+	width:732px;
+}
+
+.left-menu li {
+  list-style:none !important;
+	background:none !important;
+	margin:0 0 5px 0 !important;
+	padding:0 !important;
+}
+
+.left-menu a {
+  display: block;
+	position: relative;
+	background: #6a87b3;
+	border-radius: 13px;
+	font-size: 14px;
+	line-height: 18px;
+	color: #fff;
+	text-decoration: none;
+	height: 64px;
+}
+
+.left-menu a:hover,
+.left-menu a.act {
+  background:#8eaad3;
+}
+
+.left-menu li.alt a {
+  background:#baa578;
+}
+
+.left-menu li.alt a.act,
+.left-menu li.alt a:hover {
+  background:#d1ba88;
+}
+
+.left-menu a .ico {
+  display:block;
+}
+
+.left-menu a .text {
+  display:block;
+	padding:14px 20px 0 86px;
+}
+
+.left-menu a .text span {
+	border-bottom:1px solid #86a2cc;
+}
+
+.left-menu li.alt a .text span {
+	border-bottom:1px solid #d4c198;
+}
+
+.left-menu li.alt a .text span.cont,
+.left-menu a .text span.cont {
+	border-bottom:none;
+	display:table-cell;
+	vertical-align:middle;
+	height:36px;
+}
+
+.left-menu a.act .text span,
+.left-menu a:hover .text span {
+	border-bottom:none !important;
+}
+
+.left-menu .ico {
+  width:45px;
+	height:48px;
+	position:absolute;
+	left:18px;
+	top:7px;
+}
+
+.left-menu .ico-fast {
+  background:url(../images/ico-fast.png) 0 0 no-repeat;
+}
+
+.left-menu .ico-eng {
+  background:url(../images/ico-eng.png) 0 0 no-repeat;
+}
+
+.left-menu .ico-metal {
+  background:url(../images/ico-metal.png) 0 0 no-repeat;
+}
+
+.left-menu .ico-monolit {
+  background:url(../images/ico-monolit.png) 0 0 no-repeat;
+}
+
+.left-menu .ico-current {
+  background:url(../images/ico-current.png) 0 0 no-repeat;
+}
+
+.left-menu .ico-reconst {
+  background:url(../images/ico-reconst.png) 0 0 no-repeat;
+}
+
+.left-menu .ico-proj {
+  background:url(../images/ico-proj.png) 0 0 no-repeat;
+}
+
+.objects-list-new {
+  margin:0 -50px 0 0;
+  padding:0 0 0 0;
+}
+
+.objects-list-new .objects-list-item {
+  float:left;
+  width:196px;
+  margin:0 50px 25px 0;
+	padding:0;
+}
+
+.objects-list-new .objects-list-item .pic {
+  padding:0 0 12px 0;
+}
+
+.objects-list-new .objects-list-item img {
+  display:block;
+  width:196px;
+  height:127px;
+  position:relative;
+  behavior:url(PIE.htc);
+  position:relative;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  overflow:hidden;
+  -webkit-box-shadow:0 1px 2px 0 #000;
+  -moz-box-shadow:0 1px 2px 0 #000;
+  box-shadow:0 1px 2px 0 #000;
+  margin:0px 18px 0 0;
+  float:none;
+}
+
+.objects-list-new .ttl {
+  font-size:14px;
+	line-height:18px;
+  font-weight:bold;
+  margin:0 0 9px 0;
+}
+
+.objects-list-new a {
+  color:#474747;
+	text-decoration:none;
+	border-bottom:1px solid #aaaaaa;
+}
+
+.objects-list-new .objects-list-item:hover a,
+.objects-list-new a:hover {
+	border-bottom:none;
+}
+
+.r-col-wide .objects-list-new .objects-list-item:nth-child(3n+1) {
+  clear:left;
 }
