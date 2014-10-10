@@ -2233,8 +2233,7 @@ h4 {
 	height: 64px;
 }
 
-.left-menu a:hover,
-.left-menu a.act {
+.left-menu a:hover {
   background:#8eaad3;
 }
 
@@ -2242,9 +2241,13 @@ h4 {
   background:#baa578;
 }
 
-.left-menu li.alt a.act,
 .left-menu li.alt a:hover {
   background:#d1ba88;
+}
+
+.left-menu li.alt a.act,
+.left-menu a.act {
+  background:#c63729;
 }
 
 .left-menu a .ico {
@@ -2367,4 +2370,18 @@ h4 {
 
 .r-col-wide .objects-list-new .objects-list-item:nth-child(3n+1) {
   clear:left;
+}
+
+.show-all {
+  background: url(../images/ico-show-all.png) 0 0 no-repeat;
+	padding: 0 0 3px 40px;
+	font-size: 14px;
+	line-height: 26px;
+	color: #4e6b96;
+	cursor: pointer;
+	display: block;
+}
+
+.show-all span {
+  border-bottom:1px dotted #4e6b96;
 }
