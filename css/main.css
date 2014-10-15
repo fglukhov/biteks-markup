@@ -2385,3 +2385,100 @@ h4 {
 .show-all span {
   border-bottom:1px dotted #4e6b96;
 }
+
+/* Price list */
+
+.price-section {
+  behavior:url(PIE.htc);
+  position:relative;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+	background:#f1f1f1;
+	padding:20px 28px;
+	margin:0 0 6px 0;
+}
+
+.price-section h3 {
+  font-size:18px;
+	line-height:24px;
+	margin:0 0 20px 0;
+}
+
+.price-section h3 a {
+  text-decoration:none;
+	background:url(../images/underline-5.gif) 0 bottom repeat-x;
+}
+
+.price-section h3 a:hover {
+	background:none;
+}
+
+.price-table {
+  border:none;
+	font-size:14px !important;
+	line-height:16px !important;
+	width:100%;
+	margin:0 0 4px 0 !important;
+}
+
+.price-table td {
+  border:none !important;
+}
+
+.price-table .name {
+  background: url(../images/price-dots.png) 0 14px repeat-x;
+	padding: 3px 20px 7px 0 !important;
+	color: #000;
+	width: 435px;
+}
+
+.price-table .name span.cont {
+  background:#f1f1f1;
+	box-shadow:5px 0 0 0 #f1f1f1;
+	box-decoration-break: clone;
+}
+
+.price-table .val {
+  color: #a33b31;
+	padding: 3px 0 7px 5px !important;
+}
+
+.price-table .val small {
+  font-size:10px;
+}
+
+.calc-link-2 {
+	display: inline-block;
+	padding: 2px 0 4px 34px;
+	background: url(../images/ico-calc-2.png) 0 0 no-repeat;
+	margin: 11px 0 4px 0;
+}
+
+.price-table .gray {
+  color:#858585;
+}
+
+.price-info {
+  behavior: url(PIE.htc);
+	position: relative;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background: #dbe1ed;
+	padding: 30px 37px 17px 37px;
+	margin: 0 0 6px 0;
+	color: #474747;
+	font-size: 13px;
+	line-height: 18px;
+	margin: 51px 0 0 0;
+}
+
+.price-info h3 {
+  font-size: 16px;
+	line-height: 19px;
+	margin: 0 0 16px 0;
+	color: #0f0f0f;
+}
+
+/* Price list END */
